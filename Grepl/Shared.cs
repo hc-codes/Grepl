@@ -1,8 +1,7 @@
-﻿namespace Grepl
+﻿namespace Grepl;
+
+public class Shared
 {
-	public class Shared
-	{
-		public static Shared Instance = new Shared();
-		public bool Debug { get; set; }
-	}
+    public static Shared Instance = new Shared();
+    public bool Debug { get; set; }
 }

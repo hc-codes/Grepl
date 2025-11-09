@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
-namespace Grepl
+namespace Grepl;
+
+class CaptureResult
 {
-	class CaptureResult
-	{
-		public List<string> FileNames = new List<string>();
-	}
+    public List<string> FileNames = new List<string>();
 }
