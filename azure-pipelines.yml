@@ -10,7 +10,7 @@ jobs:
   - task: UseDotNet@2
     inputs:
       packageType: 'sdk'
-      version: '3.1.x'
+      version: '9.0.x'
 
   - powershell: |
       function Edit-XmlNodes {
@@ -82,7 +82,7 @@ jobs:
       modifyOutputPath: false
   - task: CopyFiles@2
     inputs:
-      Contents: 'Grepl\bin\Release\netcoreapp3.1\win-x64\publish\**'
+      Contents: 'Grepl\bin\Release\net9.0\win-x64\publish\**'
       TargetFolder: '$(Build.ArtifactStagingDirectory)/win-x64'
       flattenFolders: true
   - task: DotNetCoreCLI@2
@@ -96,7 +96,7 @@ jobs:
       modifyOutputPath: false
   - task: CopyFiles@2
     inputs:
-      Contents: 'Grepl\bin\Release\netcoreapp3.1\linux-x64\publish\**'
+      Contents: 'Grepl\bin\Release\net9.0\linux-x64\publish\**'
       TargetFolder: '$(Build.ArtifactStagingDirectory)/linux-x64'
       flattenFolders: true
   - task: DotNetCoreCLI@2
@@ -110,7 +110,7 @@ jobs:
       modifyOutputPath: false
   - task: CopyFiles@2
     inputs:
-      Contents: 'Grepl\bin\Release\netcoreapp3.1\linux-arm\publish\**'
+      Contents: 'Grepl\bin\Release\net9.0\linux-arm\publish\**'
       TargetFolder: '$(Build.ArtifactStagingDirectory)/linux-arm'
       flattenFolders: true
   - task: DotNetCoreCLI@2
@@ -124,7 +124,7 @@ jobs:
       modifyOutputPath: false
   - task: CopyFiles@2
     inputs:
-      Contents: 'Grepl\bin\Release\netcoreapp3.1\linux-arm64\publish\**'
+      Contents: 'Grepl\bin\Release\net9.0\linux-arm64\publish\**'
       TargetFolder: '$(Build.ArtifactStagingDirectory)/linux-arm64'
       flattenFolders: true
   - task: DotNetCoreCLI@2
@@ -138,7 +138,7 @@ jobs:
       modifyOutputPath: false
   - task: CopyFiles@2
     inputs:
-      Contents: 'Grepl/bin/Release/netcoreapp3.1/osx-x64/publish/**'
+      Contents: 'Grepl/bin/Release/net9.0/osx-x64/publish/**'
       TargetFolder: '$(Build.ArtifactStagingDirectory)/osx-x64'
       flattenFolders: true
 
